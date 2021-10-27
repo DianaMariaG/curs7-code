@@ -48,7 +48,8 @@ public class Bottle {
         }
     }
 
-    private String drink(int desiredLiquidToDrink){
+    public String drink(int desiredLiquidToDrink){
+        conditionToDrink();
         if(desiredLiquidToDrink <= this.availableLiquid){
             this.availableLiquid = this.availableLiquid- desiredLiquidToDrink;
             return "You can drink " + desiredLiquidToDrink + " ml. Then, there will remain only " + (availableLiquid-desiredLiquidToDrink) + " ml.";
@@ -57,11 +58,9 @@ public class Bottle {
         }
     }
 
-    public String conditionToDrink(int desiredLiquidToDrink){
+    private void conditionToDrink(){
         if(this.open == false){
-            return "First, you have to open the bottle!";
-        } else {
-            return drink(desiredLiquidToDrink);
+            System.out.println("First, you have to open the bottle!");
         }
     }
 

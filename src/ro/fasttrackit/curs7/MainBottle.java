@@ -6,12 +6,12 @@ public class MainBottle {
         Bottle bottle2 = new Bottle(1000, 425, false);
         Bottle bottle3 = new Bottle( 2000, 0, false);
 
-        System.out.println(bottle2.conditionToDrink(40)); //you can't drink because the bottle is closed
+        System.out.println(bottle2.drink(40)); //you can't drink because the bottle is closed
         System.out.println(bottle2.openBottle()); // opens bottle2
         System.out.println(bottle2.openBottle()); // says that bottle2 is already open
-        System.out.println(bottle2.conditionToDrink(40)); //you can drink now
+        System.out.println(bottle2.drink(40)); //you can drink now
         System.out.println(bottle2.setAvailableLiquid(345)); // new availableLiquid
-        System.out.println(bottle2.conditionToDrink(25)); //you can drink again
+        System.out.println(bottle2.drink(25)); //you can drink again
 
 
         System.out.println(bottle1.closeBottle()); // closes bottle1
