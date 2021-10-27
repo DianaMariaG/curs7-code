@@ -48,19 +48,15 @@ public class Bottle {
         }
     }
 
-    public String drink(int desiredLiquidToDrink){
-        conditionToDrink();
-        if(desiredLiquidToDrink <= this.availableLiquid){
-            this.availableLiquid = this.availableLiquid- desiredLiquidToDrink;
-            return "You can drink " + desiredLiquidToDrink + " ml. Then, there will remain only " + (availableLiquid-desiredLiquidToDrink) + " ml.";
+    public String drink(int desiredLiquidToDrink) {
+        if (this.open == false) {
+            return "First, you have to open the bottle!";
+        }
+        if (desiredLiquidToDrink <= this.availableLiquid) {
+            this.availableLiquid = this.availableLiquid - desiredLiquidToDrink;
+            return "You can drink " + desiredLiquidToDrink + " ml. Then, there will remain only " + (availableLiquid - desiredLiquidToDrink) + " ml.";
         } else {
             return "There is not enough liquid for you to drink";
-        }
-    }
-
-    private void conditionToDrink(){
-        if(this.open == false){
-            System.out.println("First, you have to open the bottle!");
         }
     }
 
