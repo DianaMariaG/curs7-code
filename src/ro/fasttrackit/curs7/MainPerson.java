@@ -1,6 +1,6 @@
 package ro.fasttrackit.curs7;
 
-public class PersonMain {
+public class MainPerson {
     public static void main(String[] args) {
         Person person1 = new Person("Diana Gheorghe", 23, false); //date intacte de la inceput, care nu se mai modifica de aici
         Person person2 = new Person("Flavia", 29, true);

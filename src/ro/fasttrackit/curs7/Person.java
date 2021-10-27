@@ -36,16 +36,11 @@ public class Person {
         this.married = married;
     }
 
-
     public String personDetails(){
         return name + " is " + age + " years old " + "and it's " + married + " that he/she is married.";
     }
 
     public String toString(){
-
         return name + " is " + age + " years old " + "and it's " + married + " that he/she is married. He/She is happy.";
     }
-
-
-
 }
